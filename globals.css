@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paper mode (light) */
+  --ink: #11151c;
+  --paper: #f7f4ec;
+  --paper-raised: #ffffff;
+  --brass: #b8902a;
+  --brass-strong: #8f6e1f;
+  --forest: #2f6b4f;
+  --rust: #a8472a;
+  --line: #ddd6c4;
+  --text-primary: #14171d;
+  --text-secondary: #5b5747;
+  --text-muted: #8c8775;
+
+  --font-voice: 'Fraunces', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme='dark'] {
+  --ink: #0b0d11;
+  --paper: #11141a;
+  --paper-raised: #171b22;
+  --brass: #d4af37;
+  --brass-strong: #e9c75c;
+  --forest: #4f9a76;
+  --rust: #d06848;
+  --line: #2a2e37;
+  --text-primary: #ece8da;
+  --text-secondary: #aba78f;
+  --text-muted: #6f6c5c;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+.font-voice { font-family: var(--font-voice); }
+.font-mono { font-family: var(--font-mono); }
+
+.ledger-number {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.seal {
+  border: 1px solid var(--brass);
+  color: var(--brass-strong);
+}
+
+.card-raised {
+  background-color: var(--paper-raised);
+  border: 1px solid var(--line);
+}
